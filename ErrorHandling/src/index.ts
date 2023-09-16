@@ -1,11 +1,9 @@
-interface User {
+type Profile = {
   name: string
-  age: number
 }
 
-const renderUser = (user: User) => {
-  console.log(user)
+const profile: Profile = {
+  name: 'Duc',
 }
 
-const user = { name: 'Duoc', age: 26 }
-renderUser(user)
+console.log(profile)
