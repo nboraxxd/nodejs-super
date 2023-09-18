@@ -1,14 +1,12 @@
 import express from 'express'
+import { sum } from '@/utils'
 
 const app = express()
 const port = 3000
 
-const sum = (obj: { a: number; b: number }) => {
-  return obj.a + obj.b
-}
-
 app.get('/', (_req, res) => {
-  const value = sum({ a: 1, b: 2 })
+  const data = { a: 1, b: 2 }
+  const value = sum(data)
   res.send(`Hello World! ${value}`)
 })
 
